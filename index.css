@@ -16,8 +16,7 @@ header {
     align-items: center;
 
 }
-
-img {
+.logo img {
     height: 100px;
     padding: 0 23px;
 }
@@ -101,10 +100,11 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: goldenrod;
+    color: rgb(83, 215, 248);
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     font-weight: bold;
+    /* text-decoration: wavy; */
     margin-bottom: 10px;
 }
 
@@ -133,19 +133,18 @@ nav ul li a:hover {
     transition: box-shadow 0.3s ease; 
 }
 .eng1:hover {
-    color: gold;
-    border: 2px solid gold;
-    box-shadow: 0 4px 15px gold;
+    color: rgb(83, 215, 248);
+    border: 2px solid rgb(83, 215, 248);
+    box-shadow: 0 4px 15px rgb(83, 215, 248);
     /* Shadow effect on hover */
 }
 .about{
     background-color: white;
-    height: 500px;
+    height: 95vh;
     display: flex;
     justify-content: center; 
     align-items: center;
     flex-direction: column;
-    margin: 2px;
 }
 .about-content{
     display: flex;
@@ -155,11 +154,16 @@ nav ul li a:hover {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 17px;
-    margin: 0 0 12px 0;
+    margin: 0 0 15px 0;
+}
+.about-content h1{
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
 }
 .about-content span{
     color: rgb(117, 28, 28);
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
 }
 .about > p{
@@ -168,24 +172,76 @@ nav ul li a:hover {
     align-items: center;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
+    text-decoration: underline;
     font-weight: bold;
 }
 .organizers{
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin: 0 0 12px 0;
+    margin: 0 0 15px 0;
 }
 .img1{
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    /* align-items: space-around; */
     margin: 0 40px;
-    height:auto;
+    
+}
+.img1 img{
+    height: 150px;
+}
+.img1 span{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(117, 28, 28);
+    margin: 6px 0;;
 }
 
-
+.events{
+    height: 60vh;
+    background-color: black;
+}
+.events >h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    padding: 20px  0 20px 20px;
+    color: #ffffff;
+}
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 20px;
+    gap: 10px;
+}
+.event-card {
+    background-color: transparent;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    /* box-shadow: 0 2px 5px white; */
+}
+.event-card >img {
+    width: 53%;
+}
+.event-info {
+    padding: 15px;
+}
+.event-info >h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: white;
+}
+.event-info >p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #dbd5d5;
+}
 /* .contact {
     height: 60vh;
 }
