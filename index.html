@@ -7,7 +7,7 @@
     <title>EventORBIS</title>
     <link rel="icon" href="img\favicon.ico" type="image/x-icon"> <!-- Link to your favicon -->
     <link rel="stylesheet" href="index.css">
-    <!-- <script src="index.js" defer></script> -->
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -19,10 +19,10 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#about1">About Us</a></li>
+                    <li><a href="#events1">Events</a></li>
+                    <li><a href="#faq1">FAQs</a></li>
+                    <li><a href="#contact1">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +33,7 @@
     </header>
     <main>
         <div>
-            <section class="home">
+            <section class="home" id="home1">
                 <div class="content">
                     <div class="quote1">
                         <span>Empower Your Events, </span>
@@ -52,7 +52,7 @@
             </section>
         </div>
         <!-- about section -->
-        <div class="about">
+        <div class="about" id="about1">
             <div class="about-content">
                 <h1>About Us</h1>
                 <span>Our platform offers tools to create, organize, and attend events effortlessly.</span>
@@ -92,7 +92,7 @@
         </div>
         
         <!-- Events section -->
-        <div class="events">
+        <div class="events" id="events1">
             <div class="events-header">
                 <h2>Recent Events</h2>
                 <h3><a href="">View more...</a></h3>
@@ -139,60 +139,78 @@
         </div>
 
         <!-- Contact Section -->
-         <div class="contact">
+         <div class="contact" id="contact1">
             <div class="contact-box">
                 <div class="rw-content">
                     <div class="cimg">
-                        <img src="" alt="contact-us">
+                        <img src="/img/connect.png" alt="contact-us">
                     </div>
                    
                     <div class="col-content">
-                        <div class="form-grp">
-                            <form action="">
-                                <label for="username">Name  </label><br>
+                        
+                            <form action="" class="contact-form">
+                                <label for="username">Name  </label>
                                 <input type="text" name="username" id="username" required><br>
-                                <label for="email1">Email  </label><br>
+                                <label for="email1">Email  </label>
                                 <input type="email" name="email1" id="email1" required><br>
-                                <label for="city">Phone Number  </label><br>
+                                <label for="city">Phone Number  </label>
                                 <input type="text" name="city" id="city" required><br>
-                                <button type="submit">Get Help</button>
+                                <!-- <label for="message">Message  </label> -->
+                                <!-- <textarea name="message" id="message" rows="4"></textarea> -->
+                                <button type="submit">Contact Us</button>
                             </form>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
          </div>
-        <!-- <div class="contact">
 
-            <div class="box-img">
-                <div id="one">
-                    <span>Contact Us</span>
-                    <img src="" alt="">
+        <!-- FAQ Section -->
+
+         <div class="faq-section" id="faq1">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is Event Management System?</h3>
+                        <button class="faq-toggle">+</button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Event Management System is a platform that helps you create, organize, and manage events effortlessly.Event Management System is a platform that helps you create, organize, and manage events effortlessly.</p>
+                    </div>
                 </div>
-                <div class="info">
-                    <form>
-                        <span id="info">
-                          <label for="username" class="text-small-uppercase">Username</label>
-                          <input class="text-body" id="username" name="username" type="text" required>
-                        </span>
-                        <span id="info">
-                          <label for="email" class="text-small-uppercase">Email</label>
-                          <input class="text-body" id="email" name="email" type="email"required>
-                        </span>
-                        <span id="info">
-                          <label for="city" class="text-small-uppercase">City</label>
-                          <input class="text-body" id="city" name="city" type="text" required>
-                        </span>
-                        <input class="text-small-uppercase" id="submit" type="submit" value="Subscribe now">
-                      </form>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I register for an event?</h3>
+                        <button class="faq-toggle">+</button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can register for an event by clicking the 'Register' button on the event page and filling out the required information.</p>
+                    </div>
                 </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I register for an event?</h3>
+                        <button class="faq-toggle">+</button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can register for an event by clicking the 'Register' button on the event page and filling out the required information.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I register for an event?</h3>
+                        <button class="faq-toggle">+</button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can register for an event by clicking the 'Register' button on the event page and filling out the required information.</p>
+                    </div>
+                </div>
+                <!-- Add more FAQ items as needed -->
             </div>
-        </div> -->
-       <div class="container">
-        
-       </div>
+        </div>
         <!-- subscribe section -->
-         <div class="subscribe">
+        <div class="subscribe"  id="subscribe1">
             <div class="subcontent">
                 <p id="t1">Stay updated with the Latest Events.</p>
                 <p id="t2">Get Our Newsletter!</p>
@@ -202,51 +220,13 @@
                 <button class="subsc">Subscribe</button>
             </div>
          </div>
-
-         <div class="faqs">
-             <p id="fhead">Frequently Asked Questions</p>
-            <div class="box">
-                <ul>
-                    <li>
-                        <a class="faq1" href="f0">
-                            <span>What is Event Orbis?</span>
-                        </a>
-                        <div class="faq1after">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti illo voluptas sed vitae repellat dolorum dolor veritatis perspiciatis hic! Fugiat quasi temporibus modi doloremque laudantium veritatis optio eius placeat.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="faq1" href="f0">
-                            <span>What is Event Orbis?</span>
-                        </a>
-                        <div class="faq1after">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti illo voluptas sed vitae repellat dolorum dolor veritatis perspiciatis hic! Fugiat quasi temporibus modi doloremque laudantium veritatis optio eius placeat.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="faq1" href="f0">
-                            <span>What is Event Orbis?</span>
-                        </a>
-                        <div class="faq1after">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti illo voluptas sed vitae repellat dolorum dolor veritatis perspiciatis hic! Fugiat quasi temporibus modi doloremque laudantium veritatis optio eius placeat.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="faq1" href="f0">
-                            <span>What is Event Orbis?</span>
-                        </a>
-                        <div class="faq1after">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti illo voluptas sed vitae repellat dolorum dolor veritatis perspiciatis hic! Fugiat quasi temporibus modi doloremque laudantium veritatis optio eius placeat.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-         </div>
     </main>
     <footer class="flex-center">
         <p>Copyright &copy; EventORBIS.com</p>
     </footer>
+    <button id="scrollToTopBtn" class="scroll-to-top">
+        &#8679; <!-- Unicode for upward arrow -->
+    </button>
 </body>
 
 </html>

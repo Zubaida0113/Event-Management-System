@@ -14,6 +14,11 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: top 0.3s;
 
 }
 .logo img {
@@ -50,7 +55,9 @@ nav ul li a:hover {
     display: flex;
     /* Use flexbox for the ul */
     justify-content: center;
+    
 }
+
 
 .login {
     padding-right: 20px;
@@ -201,7 +208,7 @@ nav ul li a:hover {
 }
 
 .events{
-    height: 70vh;
+    height: 74vh;
     background-color: black;
 }
 .events-header{
@@ -209,27 +216,28 @@ nav ul li a:hover {
     justify-content: space-between;/* Distribute space between items */
     align-items: center;
     flex-direction: row;
-    height: 10vh;
+    height: 12vh;
     padding: 5px 53px 5px 53px;
 }
 .events-header >h2 {
     font-family: "Poppins", sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     color: #ffffff;
 }
 .events-header>h3>a{
-   
+    font-size: 25px;
     font-family: "Poppins", sans-serif;
     color: white;
     text-decoration: underline;
+}
+.events-header>h3>a:hover{
+    color: rgb(83, 215, 248);
 }
 .events-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly; /* Distribute space between items */
-    
-    
 }
 .event-card {
     background-color: transparent;
@@ -285,8 +293,9 @@ nav ul li a:hover {
 .contact-box {
     display: flex;
     align-items: center;
-    height: 60vh;
+    height: 65vh;
     margin: 30px;
+    border-radius: 30px;
     background-color: black;
 }
 .rw-content {
@@ -296,64 +305,93 @@ nav ul li a:hover {
     height: 100%;
 }
 .rw-content > .cimg{
-    width: 50%;
-    margin: 15px 0 15px 25px;
-    background-color: lightblue;
-    border-radius: 20px;
+    width: 45%;
+    margin: 25px 15px 25px 25px;
+    background-color: transparent;
+    
+}
+.rw-content > .cimg> img{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px; 
 }
 .col-content{
     width: 50%;
-    margin: 15px 25px 15px 15px;
-    background-color:cadetblue;
-    border-radius: 20px;
+    margin: 25px 25px 25px 15px;
+    background-color:transparent;
+    border-radius: 30px;
 }
-.form-grp{
+.contact-form{
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    align-items: flex-start;
     height: 100%;
-    
+    padding: 30px;
+  
+}
+.contact-form>label{
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: white;
+    /* margin: 10px 0 10px 0; */
+}
+.contact-form > input {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    border: none; /* Remove the border */
+    border-bottom: 2px solid white; /* Add a bottom border to create the line effect */
+    background-color: transparent; /* Make the background transparent */
+    color: white; /* Set text color */
+    outline: none; /* Remove the outline */
+    padding: 5px 0; /* Add some padding for better spacing */
+}
+/* .contact-form > input::selection{
+    border-bottom: 2px solid rgb(83, 215, 248);
+} */
+.contact-form> button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    width: 30%;
+    height: 40px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+/* Change the input field border color and label color when the input is focused */
+.contact-form > input:focus {
+    color:  rgb(83, 215, 248);
+    border-bottom: 2px solid rgb(83, 215, 248); /* Change border color to blue */
+}
+/* .contact-form > input:focus + label {
+    color: rgb(83, 215, 248); /* Change label color to blue */
+/* Ensure the label changes color when the input field is focused */
+/* .contact-form > label:focus-within {
+    color: rgb(83, 215, 248);/* Change label color to blue */
+.contact-form> button:hover{
+    color: rgb(83, 215, 248);
+    border: 2px solid rgb(83, 215, 248);
+    box-shadow: 0 4px 15px rgb(83, 215, 248);
+    /* Shadow effect on hover */
 }
 .contact-box img{
     height: 100%;
     width: 50%;
-    background-color: lightpink;
 }
-
-/*
-.box-img {
-    margin: 20px 20px 20px 20px;
-    background-color: lightcoral;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    height: 54vh;
-    border-radius: 0.25rem;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
-}
-#one{
-    display: flex;
-    flex-direction: column;
-}
-#info{
-    display: flex;
-    flex-direction: column;
-} */
-
 
 .subscribe {
     background-color: burlywood;
-    height: 29vh;
+    height: 100%;
     display: flex;
-
     flex-direction: column;
+    padding: 10px 0;
 }
-
 .subcontent {
-
     font-family: "Poppins", sans-serif;
     margin: 20px 0 10px 200px;
 }
@@ -371,6 +409,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* Styling for the email input field in the subscribe section */
 #mail {
     height: 30px;
     border-radius: 18px;
@@ -379,8 +418,21 @@ nav ul li a:hover {
     color: black;
     border: 2px solid black;
     border-radius: 20px;
+    font-family: "Poppins", sans-serif; /* Set font family */
+    font-size: 16px; /* Set font size */
+    background-color: white; /* Make the background transparent */
+    outline: none; /* Remove the outline */
+    padding: 5px 10px; /* Add some padding for better spacing */
 }
-
+/* #mail:focus {
+    color: rgb(83, 215, 248);
+    border: 2px solid rgb(83, 215, 248);
+    /* Change border color to blue  */
+#mail::placeholder {
+    color: gray; /* Set placeholder text color */
+    font-family: "Poppins", sans-serif; /* Set font family for placeholder */
+    font-size: 16px; /* Set font size for placeholder */
+}
 .area {
     display: flex;
     /* justify-content: space-e; */
@@ -418,15 +470,87 @@ nav ul li a:hover {
     /* Shadow effect on hover */
 }
 
-.faqs{
-    background-color: white;
-    height: 40vh;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 17px;
+.faq-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
 }
-.fhead{
+
+.faq-section h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+}
+
+.faq-answer {
+    padding: 15px;
+    display: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #555;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+/* Floating button styles */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(117, 28, 28);
+    color: white;
+    border:2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: rgb(117, 28, 28);
 }
 
 /* Footer */
