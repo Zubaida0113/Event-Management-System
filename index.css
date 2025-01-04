@@ -201,32 +201,49 @@ nav ul li a:hover {
 }
 
 .events{
-    height: 60vh;
+    height: 70vh;
     background-color: black;
 }
-.events >h2 {
+.events-header{
+    display: flex;
+    justify-content: space-between;/* Distribute space between items */
+    align-items: center;
+    flex-direction: row;
+    height: 10vh;
+    padding: 5px 53px 5px 53px;
+}
+.events-header >h2 {
     font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    padding: 20px  0 20px 20px;
+    font-size: 30px;
     color: #ffffff;
+}
+.events-header>h3>a{
+   
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-decoration: underline;
 }
 .events-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0 20px;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly; /* Distribute space between items */
+    
+    
 }
 .event-card {
     background-color: transparent;
     border: 3px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    /* box-shadow: 0 2px 5px white; */
+    /* overflow: hidden; */
+    width: 280px;
+    box-shadow: 0 2px 6px white;
 }
-.event-card >img {
-    width: 53%;
+.event-card img {
+    max-width: 50%; /* Adjust this value as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
 }
 .event-info {
     padding: 15px;
@@ -235,12 +252,32 @@ nav ul li a:hover {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     margin: 0 0 10px 0;
-    color: white;
+    color:white;
 }
 .event-info >p {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     color: #dbd5d5;
+}
+.register-event{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100px;
+    height: 36px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+.register-event:hover {
+    color: rgb(83, 215, 248);
+    border: 2px solid rgb(83, 215, 248);
+    box-shadow: 0 4px 15px rgb(83, 215, 248);
+    /* Shadow effect on hover */
 }
 /* .contact {
     height: 60vh;
