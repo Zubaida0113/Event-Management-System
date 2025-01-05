@@ -10,4 +10,4 @@ Its features are:-
   <li>Having a Login/SignUp page for a personalized experience.</li>
   <li>Responsive design for better user experience</li>
 </ul>
-
+<b> I have designed all the graphics, icons and logo for this website using Canva.</b>
