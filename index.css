@@ -292,7 +292,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     height: 65vh;
-    margin: 30px;
+    margin: 40px 30px;
     border-radius: 30px;
     background-color: black;
 }
