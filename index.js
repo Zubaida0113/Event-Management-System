@@ -1,3 +1,4 @@
+// FAQs toggle functionality
 document.querySelectorAll('.faq-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const faqItem = button.parentElement.parentElement;
@@ -16,7 +17,7 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
     }
   });
 });
-
+// header hide on scroll down and show on scroll up functionality
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 

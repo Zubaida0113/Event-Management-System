@@ -5,7 +5,9 @@
     padding: 0;
 
 }
-
+html{
+    scroll-behavior: smooth;
+}
 header {
     background-color: black;
     font-family: "Poppins", sans-serif;
@@ -58,9 +60,12 @@ nav ul li a:hover {
     
 }
 
-
 .login {
     padding-right: 20px;
+}
+
+.register-link {
+    text-decoration: none; /* Remove underline from the link */
 }
 
 .register {
@@ -70,19 +75,19 @@ nav ul li a:hover {
     width: 120px;
     height: 30px;
     background: transparent;
-    color: white;
     border: 2px solid white;
     border-radius: 20px;
     margin: 2px;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    color: white; /* Ensure text color is white */
 }
 
 .register:hover {
-    color: rgb(83, 215, 248);
     border: 2px solid rgb(83, 215, 248);
     box-shadow: 0 4px 15px rgb(83, 215, 248);
     /* Shadow effect on hover */
+    color: rgb(83, 215, 248); /* Change text color on hover */
 }
 
 .home {
@@ -511,7 +516,8 @@ nav ul li a:hover {
 .faq-toggle {
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
     cursor: pointer;
     outline: none;
 }
@@ -526,6 +532,7 @@ nav ul li a:hover {
 
 .faq-item.active .faq-answer {
     display: block;
+    color: rgb(3, 3, 3);
 }
 /* Floating button styles */
 .scroll-to-top {
@@ -534,7 +541,7 @@ nav ul li a:hover {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: rgb(117, 28, 28);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);;
     color: white;
     border:2px solid white;
     border-radius: 50%;
