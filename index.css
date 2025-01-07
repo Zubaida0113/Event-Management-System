@@ -146,7 +146,8 @@ nav ul li a:hover {
 }
 .eng1:hover {
     color: rgb(83, 215, 248);
-    border: 2px solid rgb(83, 215, 248);
+    font-weight: bold;
+    border: 3px solid rgb(83, 215, 248);
     box-shadow: 0 4px 15px rgb(83, 215, 248);
     /* Shadow effect on hover */
 }
