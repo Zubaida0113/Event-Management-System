@@ -148,3 +148,36 @@ form .pass-link a:hover,
 form .signup-link a:hover{
   text-decoration: underline;
 }
+/* Back Button */
+.back-button {
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100px;
+  height: 36px;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.back-btn i {
+  margin-right: 5px;
+}
+
+.back-btn:hover {
+  font-weight: bolder;
+  border: 3px solid black;
+  box-shadow: 0 4px 16px black;
+  /* Shadow effect on hover */
+}
