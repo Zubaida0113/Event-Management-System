@@ -175,11 +175,13 @@ nav ul li a:hover {
     color: black;
     font-size: 35px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .about-content span{
     color: rgb(117, 28, 28);
     font-size: 23px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 .about > p{
     display: flex;
