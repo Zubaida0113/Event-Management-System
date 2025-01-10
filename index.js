@@ -52,3 +52,8 @@ scrollToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Toggle the navigation menu
+document.getElementById('navToggle').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
