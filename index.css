@@ -72,7 +72,7 @@ nav ul li a:hover {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 17px;
-    width: 120px;
+    width: 100px;
     height: 30px;
     background: transparent;
     border: 2px solid white;
@@ -88,6 +88,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 15px rgb(83, 215, 248);
     /* Shadow effect on hover */
     color: rgb(83, 215, 248); /* Change text color on hover */
+}
+@media screen and (max-width: 1000px){
+    .navbar{
+        display: none;
+    }
 }
 
 .home {
