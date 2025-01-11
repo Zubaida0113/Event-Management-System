@@ -169,16 +169,20 @@
                    
                     <div class="col-content">
                         
-                            <form action="" class="contact-form">
+                        <form action="" class="contact-form">
                                 <label for="username">Name  </label>
-                                <input type="text" name="username" id="username" required><br>
+                                <input type="text" name="username" id="username" required title="Enter your name"><br>
+                                <!-- <div class="cfin">
+                                    <input type="text" name="username" id="username" required title="Enter your name"><br>
+                                    <div class="validation-message" id="cname-validation"></div>
+                                </div> -->
                                 <label for="email1">Email  </label>
-                                <input type="email" name="email1" id="email1" required><br>
+                                <input type="email" name="email1" id="email1" required title="Enter your email"><br>
                                 <label for="city">Phone Number  </label>
-                                <input type="text" name="city" id="city" required><br>
+                                <input type="text" name="city" id="city" required title="Enter your phone number"><br>
                                 <!-- <label for="message">Message  </label> -->
                                 <!-- <textarea name="message" id="message" rows="4"></textarea> -->
-                                <button type="submit">Contact Us</button>
+                                <button type="submit" onclick="contact()">Contact Us</button>
                             </form>
                         
                     </div>
@@ -238,8 +242,12 @@
                     <p id="t2">Get Our Newsletter!</p>
                 </div>
                 <div class="area">
-                    <input type="email" name="mail" id="mail" placeholder="example@gmail.com">
-                    <button class="subsc">Subscribe</button>
+                    <div>
+                        <input type="email" name="mail" id="mail" placeholder="example@gmail.com" required title="Please enter a valid email address.">
+                        <div class="validation-message" id="mail-validation"></div>
+                    </div>
+                    
+                    <button type="button" class="subsc" onclick="validateEmail()">Subscribe</button>
                 </div>
             </div>
          </div>

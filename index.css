@@ -216,7 +216,7 @@ nav ul li a:hover {
 .home {
     display: flex;
     justify-content: center;
-    height: 58vh;
+    height: 60vh;
     background: rgb(0, 0, 0, 0.5) url(./img/hero1.png);
     background-size: cover;
     background-position: center;
@@ -316,6 +316,37 @@ nav ul li a:hover {
     text-decoration: underline;
     font-weight: bold;
 }
+@media screen and (max-width: 740px) {
+    .quote1 {
+        display: flex;
+        align-items: start;
+    }
+    .quote2 {
+        display: flex;
+        align-items: start;
+        margin-left:  -80px;
+    }
+    .engageINC{
+        margin-top: 15px;
+        margin-left:  -230px;
+    }
+    .about-content h1 {
+        font-size: 30px;
+    }
+    .about-content span {
+        font-size: 20px;
+    }
+    .about-content {
+        font-size: 16px;
+    }
+    .about > p {
+        font-size: 20px;
+    }
+    .organizers{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 .organizers{
     display: flex;
     align-items: center;
@@ -368,6 +399,7 @@ nav ul li a:hover {
     color: rgb(83, 215, 248);
 }
 .events-container {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -426,7 +458,7 @@ nav ul li a:hover {
 .contact-box {
     display: flex;
     align-items: center;
-    height: 65vh;
+    height: 100%;
     margin: 40px 30px;
     border-radius: 30px;
     background-color: black;
@@ -458,6 +490,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* margin: 10px 10px; */
     height: 100%;
     padding: 30px;
   
@@ -466,7 +499,7 @@ nav ul li a:hover {
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     color: white;
-    /* margin: 10px 0 10px 0; */
+    margin: 10px 0 10px 0;
 }
 .contact-form > input {
     font-family: "Poppins", sans-serif;
@@ -477,7 +510,18 @@ nav ul li a:hover {
     background-color: transparent; /* Make the background transparent */
     color: white; /* Set text color */
     outline: none; /* Remove the outline */
-    padding: 5px 0; /* Add some padding for better spacing */
+    padding: 5px 0 10px 0; /* Add some padding for better spacing */
+}
+.cfin>input {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    border: none; /* Remove the border */
+    border-bottom: 2px solid white; /* Add a bottom border to create the line effect */
+    background-color: transparent; /* Make the background transparent */
+    color: white; /* Set text color */
+    outline: none; /* Remove the outline */
+    padding: 5px 0 10px 0; /* Add some padding for better spacing */
 }
 /* .contact-form > input::selection{
     border-bottom: 2px solid rgb(83, 215, 248);
@@ -488,11 +532,12 @@ nav ul li a:hover {
     font-size: 20px;
     width: 30%;
     height: 40px;
+    width: 200px;
     background: transparent;
     color: white;
     border: 2px solid white;
     border-radius: 20px;
-    margin: 10px 0 0 0;
+    margin: 30px 0 0 0;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
@@ -507,8 +552,9 @@ nav ul li a:hover {
 /* .contact-form > label:focus-within {
     color: rgb(83, 215, 248);/* Change label color to blue */
 .contact-form> button:hover{
+    font-size: 22px;
     color: rgb(83, 215, 248);
-    border: 2px solid rgb(83, 215, 248);
+    border: 3px solid rgb(83, 215, 248);
     box-shadow: 0 4px 15px rgb(83, 215, 248);
     /* Shadow effect on hover */
 }
@@ -516,7 +562,42 @@ nav ul li a:hover {
     height: 100%;
     width: 50%;
 }
-
+@media screen and (max-width: 740px) {
+    .contact-box {
+        flex-direction: column;
+        height: 100%;
+    }
+    .rw-content {
+        flex-direction: column;
+        height: 100%;
+    }
+    .rw-content > .cimg {
+        width: 100%;
+        margin: 0;
+    }
+    .col-content {
+        width: 100%;
+        margin: 0;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .contact-form > button {
+        width: 100%;
+    }
+    .cimg img {
+        display: none;
+    }
+    
+}
+.validation-message {
+    color: rgb(221, 58, 17);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    margin-top: 5px;
+}
 .subscribe {
     background-color: burlywood;
     height: 35vh;
@@ -588,7 +669,7 @@ nav ul li a:hover {
     margin: 0 20px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 19px;
     width: 120px;
     height: 40px;
     color: black;
@@ -601,10 +682,48 @@ nav ul li a:hover {
 
 .subsc:hover {
     color: rgb(3, 3, 3);
-    border: 2px solid rgb(0, 0, 0);
+    font-weight: bold;
+    border: 3px solid rgb(0, 0, 0);
     box-shadow: 0 4px 15px black;
     /* Shadow effect on hover */
 }
+@media screen and (max-width: 740px) {
+    .subcontent {
+        margin: 0;
+    }
+    .area {
+        flex-direction: column;
+    }
+    #mail {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .subsc {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 925px) {
+    .subcontent {
+        margin: 0;
+    }
+    .area {
+        flex-direction: column;
+    }
+    #mail {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .subsc {
+        width: 40%;
+    }
+    .events-container{
+        justify-content: center;
+    }
+    .contact-box{
+        height: 70vh;
+    }
+}
+
 
 .faq-section {
     padding: 20px;

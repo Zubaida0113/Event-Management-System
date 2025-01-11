@@ -89,44 +89,51 @@ function closePopup(){
 }
 
 function addEvent() {
-  // Get form values
-  const eventName = document.getElementById('event-name').value;
-  const eventDate = document.getElementById('event-date').value;
-  const eventDescription = document.getElementById('event-description').value;
+  // Get form elements
+  const eventName = document.getElementById('event-name');
+  const eventDate = document.getElementById('event-date');
+  const eventTime = document.getElementById('event-time');
+  const eventDescription = document.getElementById('event-description');
+  const validationMessages = document.getElementById('validation-messages');
 
-// Validate form fields
-if (!eventName.checkValidity()) {
-  alert('Event Name must be between 3 and 50 characters.');
-  eventName.focus();
-  return;
-}
-if (!eventDate.checkValidity()) {
-  alert('Please select a valid event date.');
-  eventDate.focus();
-  return;
-}
-if (!eventTime.checkValidity()) {
-  alert('Please select a valid event time.');
-  eventTime.focus();
-  return;
-}
-if (!eventDescription.checkValidity()) {
-  alert('Event Description must be between 10 and 500 characters.');
-  eventDescription.focus();
-  return;
-}
+  // Clear previous validation messages
+  validationMessages.innerHTML = '';
+
+  // Validate form fields
+  let isValid = true;
+
+  if (!eventName.checkValidity()) {
+    validationMessages.innerHTML += '<p>Event Name must be between 3 and 50 characters.</p>';
+    isValid = false;
+  }
+  if (!eventDate.checkValidity()) {
+    validationMessages.innerHTML += '<p>Please select a valid event date.</p>';
+    isValid = false;
+  }
+  if (!eventTime.checkValidity()) {
+    validationMessages.innerHTML += '<p>Please select a valid event time.</p>';
+    isValid = false;
+  }
+  if (!eventDescription.checkValidity()) {
+    validationMessages.innerHTML += '<p>Event Description must be between 10 and 500 characters.</p>';
+    isValid = false;
+  }
+
+  if (!isValid) {
+    return;
+  }
 
   // Create a new event card
   const newEventCard = document.createElement('div');
   newEventCard.classList.add('event-card');
   newEventCard.innerHTML = `
-    <img src="/img/default.png" alt="${eventName}">
+    <img src="/img/1.png" alt="${eventName.value}">
     <div class="event-info">
-      <h3>${eventName}</h3>
-      <p>${eventDescription}</p>
-      <p>Last Date : ${eventDate}</p>
+      <h3>${eventName.value}</h3>
+      <p>${eventDescription.value}</p>
+      <p>Date: ${eventDate.value} </p>
       <button class="register-event">Register</button>
-    </div>
+          </div>
   `;
 
   // Append the new event card to the events container
@@ -136,4 +143,50 @@ if (!eventDescription.checkValidity()) {
   // Close the popup and reset the form
   closePopup();
   document.getElementById('eventForm').reset();
+}
+
+
+//login
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Perform login validation here (e.g., check username and password)
+
+  // Navigate back to the previous page
+  window.history.back();
+});
+
+function validateEmail() {
+  const email = document.getElementById('mail');
+  const emailValidation = document.getElementById('mail-validation');
+
+  
+
+  // Clear previous validation message
+  emailValidation.innerHTML = '';
+  
+
+  // Validate email field
+  if (!email.checkValidity()) {
+      emailValidation.innerHTML = '*Please enter a valid email address.';
+      return false;
+  }
+  
+
+  // If the email is valid, you can proceed with further processing
+  alert('Subscription successful!');
+  // Optionally, you can reset the email field
+  email.value = '';
+  return true;
+}
+function contact(){
+  const name = document.getElementById('username');
+  const nameValidation = document.getElementById('cname-validation');
+  nameValidation.innerHTML = '';
+  if (!name.checkValidity()) {
+    emailValidation.innerHTML = '*Please enter a valid name.';
+    return false;
+}
+name.value = '';
+  return true;
 }
