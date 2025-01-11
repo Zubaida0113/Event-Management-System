@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="event.css">
-    <script src="index.js" defer></script>
+    
     <title>Event page</title>
 </head>
 <body>
     <header>
+        <div class="navbar-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="logo">
             <img src="img/EVENT.png" alt="Logo" id="Logo">
         </div>
         <div class="navbar">
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#about1">About Us</a></li>
                     <li><a href="#">Events</a></li>
@@ -35,6 +40,15 @@
             </a>
         </div>
     </header>
+    <div class="dropdown" id="dropdownMenu">
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="index.html#about1">About Us</a>
+            <a href="index.html">Events</a>
+            <a href="index.html#faq1">FAQs</a>
+            <a href="index.html#contact1">Contact Us</a>
+        </div>
+    </div>
     <main>
         <div class="events" id="events1">
             <h2>Upcoming Events</h2>
@@ -145,5 +159,6 @@
     <button id="scrollToTopBtn" class="scroll-to-top">
         &#8679; <!-- Unicode for upward arrow -->
     </button>
+    <script src="index.js" defer></script>
 </body>
 </html>

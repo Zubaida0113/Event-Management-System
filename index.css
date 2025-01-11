@@ -26,7 +26,7 @@ header {
     font-weight: 400;
     font-style: normal;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: center; */
     align-items: center;
     position: sticky;
     top: 0;
@@ -40,7 +40,7 @@ header {
     padding: 0 23px;
 }
 
-nav ul {
+/* nav ul {
     height: 12vh;
     display: flex;
     justify-content: center;
@@ -57,6 +57,19 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+} */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li {
+    padding: 0 23px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
 nav ul li a:hover {
@@ -67,32 +80,9 @@ nav ul li a:hover {
 .navbar {
     margin: 0 auto;
     display: flex;
-    /* Use flexbox for the ul */
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(115, 116, 119, 0.836); /* Translucent background */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .login {
@@ -124,25 +114,60 @@ nav ul li a:hover {
     /* Shadow effect on hover */
     color: rgb(83, 215, 248); /* Change text color on hover */
 }
-@media screen and (max-width: 1000px){
-    .navbar{
+.dropdown {
+    display: none;
+    max-height: 0; /* Initially hide the dropdown menu */
+    overflow: hidden;
+    background-color: black;
+    
+    /* Initially hide the dropdown menu */
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+.dropdown.show {
+    max-height: 45vh; /* Adjust based on the content height */
+    padding: 10px 0;
+    
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-content>a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px 0;
+    display: block;
+    font-family: poppins;
+}
+
+.dropdown-content>a:hover {
+    color: rgb(83, 215, 248);
+}
+
+@media screen and (max-width: 1100px) {
+    .nav-links {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        transition: max-height 0.3s ease-out;
-        background-color: #615f5f48;
+    }
+    .dropdown {
+        display: block; /* Show the dropdown menu on smaller screens */
     }
     .navbar-toggle {
         display: flex;
         margin: 30px;
         transition: opacity 0.3s;
     }
-    .navbar-links.active {
-        display: flex; 
-    }
+}
+@media screen and (min-width: 1100px) {
+    .dropdown {
+        display: none; /* Hide the dropdown menu on larger screens */
+     }
 }
 
 .home {

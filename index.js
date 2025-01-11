@@ -54,6 +54,33 @@ scrollToTopBtn.addEventListener('click', () => {
 });
 
 // Toggle the navigation menu
+// document.getElementById('navToggle').addEventListener('click', function() {
+//   document.querySelector('.nav-links').classList.toggle('active');
+// });
+
 document.getElementById('navToggle').addEventListener('click', function() {
-  document.querySelector('.nav-links').classList.toggle('active');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+      dropdownMenu.style.display = 'block';
+  } else {
+      dropdownMenu.style.display = 'none';
+  }
+});
+// document.getElementById('navToggle').addEventListener('click', function() {
+//   const dropdownMenu = document.getElementById('dropdownMenu');
+//   dropdownMenu.classList.toggle('show');
+// });
+document.getElementById('navToggle').addEventListener('click', function() {
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  if (dropdownMenu.classList.contains('show')) {
+    // Close the menu
+    dropdownMenu.style.maxHeight = '0';
+    dropdownMenu.style.padding = '0';
+    dropdownMenu.classList.remove('show');
+  } else {
+    // Open the menu
+    dropdownMenu.classList.add('show');
+    dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+    dropdownMenu.style.padding = '10px 0';
+  }
 });
