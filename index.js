@@ -53,34 +53,87 @@ scrollToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Toggle the navigation menu
-// document.getElementById('navToggle').addEventListener('click', function() {
-//   document.querySelector('.nav-links').classList.toggle('active');
-// });
 
-document.getElementById('navToggle').addEventListener('click', function() {
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
-      dropdownMenu.style.display = 'block';
-  } else {
-      dropdownMenu.style.display = 'none';
+function showSidebar(){
+  const side=document.querySelector('.sidebar')
+  side.style.display='flex'
+}
+function hideSidebar(){
+  const side=document.querySelector('.sidebar')
+  side.style.display='none'
+}
+function checkWindowSize() {
+  const side = document.querySelector('.sidebar');
+  if (window.innerWidth > 1100) {
+    side.style.display = 'none';
   }
-});
-// document.getElementById('navToggle').addEventListener('click', function() {
-//   const dropdownMenu = document.getElementById('dropdownMenu');
-//   dropdownMenu.classList.toggle('show');
-// });
-document.getElementById('navToggle').addEventListener('click', function() {
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  if (dropdownMenu.classList.contains('show')) {
-    // Close the menu
-    dropdownMenu.style.maxHeight = '0';
-    dropdownMenu.style.padding = '0';
-    dropdownMenu.classList.remove('show');
-  } else {
-    // Open the menu
-    dropdownMenu.classList.add('show');
-    dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
-    dropdownMenu.style.padding = '10px 0';
-  }
-});
+}
+// Add event listener for window resize
+window.addEventListener('resize', checkWindowSize);
+// Initial check when the script loads
+checkWindowSize();
+
+function popup(){
+  const pop=document.querySelector('.create-popup')
+  const overlay = document.getElementById('overlay');
+  pop.style.display='flex'
+  overlay.style.display = 'block';
+  document.body.classList.add('blur');
+}
+function closePopup(){
+  const pop=document.querySelector('.create-popup')
+  const overlay = document.getElementById('overlay');
+  pop.style.display='none'
+  overlay.style.display = 'none';
+  document.body.classList.remove('blur');
+}
+
+function addEvent() {
+  // Get form values
+  const eventName = document.getElementById('event-name').value;
+  const eventDate = document.getElementById('event-date').value;
+  const eventDescription = document.getElementById('event-description').value;
+
+// Validate form fields
+if (!eventName.checkValidity()) {
+  alert('Event Name must be between 3 and 50 characters.');
+  eventName.focus();
+  return;
+}
+if (!eventDate.checkValidity()) {
+  alert('Please select a valid event date.');
+  eventDate.focus();
+  return;
+}
+if (!eventTime.checkValidity()) {
+  alert('Please select a valid event time.');
+  eventTime.focus();
+  return;
+}
+if (!eventDescription.checkValidity()) {
+  alert('Event Description must be between 10 and 500 characters.');
+  eventDescription.focus();
+  return;
+}
+
+  // Create a new event card
+  const newEventCard = document.createElement('div');
+  newEventCard.classList.add('event-card');
+  newEventCard.innerHTML = `
+    <img src="/img/default.png" alt="${eventName}">
+    <div class="event-info">
+      <h3>${eventName}</h3>
+      <p>${eventDescription}</p>
+      <p>Last Date : ${eventDate}</p>
+      <button class="register-event">Register</button>
+    </div>
+  `;
+
+  // Append the new event card to the events container
+  const eventsContainer = document.getElementById('eventsContainer');
+  eventsContainer.appendChild(newEventCard);
+
+  // Close the popup and reset the form
+  closePopup();
+  document.getElementById('eventForm').reset();
+}
