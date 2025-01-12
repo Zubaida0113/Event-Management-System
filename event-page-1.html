@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+    <style>
+        /* Add this to your existing CSS file (index.css) */
+
+        .event-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .event-page-content {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .event-page-left {
+            flex: 1;
+        }
+
+        .event-page-left img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .event-page-right {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .event-description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .event-date,
+        .event-location {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .register-event {
+            padding: 10px 20px;
+            background-color: #4158d0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-event:hover {
+            background-color: #31b5dd;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/EVENT.png" alt="Logo" id="Logo">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about1">About Us</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="index.html#faq1">FAQs</a></li>
+                    <li><a href="index.html#contact1">Contact Us</a></li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()"><svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about1">About Us</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="index.html#faq1">FAQs</a></li>
+                    <li><a href="index.html#contact1">Contact Us</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="login">
+            <a href="signup.html" class="register-link">
+                <button class="register">Sign Up</button>
+            </a>
+            <a href="login.html" class="register-link">
+                <button class="register">Login</button>
+            </a>
+        </div>
+        <li class="toggle" onclick="showSidebar()"><svg class="cross-icon" xmlns="http://www.w3.org/2000/svg"
+                height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </li>
+    </header>
+
+    <div class="event-page">
+        <div class="event-page-content">
+            <div class="event-page-left">
+                <img src="img/Screenshot (583).png" alt="Event Image" class="event-image">
+            </div>
+            <div class="event-page-right">
+                <h1 class="event-title">Event Title</h1>
+                <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
+                    sapien tincidunt fermentum. Nullam nec nunc nec nunc ultricies ultricies. Nullam nec nunc nec nunc
+                    ultricies ultricies. Nullam nec nunc nec nunc ultricies ultricies. Nullam nec nunc nec nunc
+                    ultricies
+                    ultricies. Nullam nec nunc nec nunc ultricies ultricies.</p>
+                <p class="event-date">Date: 21/01/2025</p>
+                <p class="event-location">Location: Event Hall, City Center</p>
+                <button class="register-event">Register</button>
+            </div>
+        </div>
+    </div>
+    <app-root ng-version="14.3.0" ng-server-context="other">
+        <div class="d-none m-0 mmc-root-container p-0"><app-header id="header" _nghost-sc208="">
+                <header _ngcontent-sc208=""
+                    class="navbar py-2 navbar-fixed-top navbar-expand-lg mmc-header bg-blue navbar-shadow"><button
+                        _ngcontent-sc208="" type="button" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        class="navbar-toggler navbar-toggler-right text-white border-0 px-0"><span
+                            _ngcontent-sc208=""><i _ngcontent-sc208="" class="fas fa-bars"></i></span></button><a
+                        _ngcontent-sc208="" queryparamshandling="preserve"
+                        class="navbar-brand mx-3 mx-lg-0 mr-auto d-none d-lg-flex" href="/event/ascend-mock-tests"><img
+                            _ngcontent-sc208="" height="30" src="assets/mercerMettl_logo.svg"></a><!----><!----><a
+                        _ngcontent-sc208="" queryparamshandling="preserve"
+                        class="navbar-brand mx-3 mx-lg-0 mr-auto d-flex d-lg-none" href="/event/ascend-mock-tests"><img
+                            _ngcontent-sc208="" height="20" src="assets/mercerMettl_logo.svg"></a><!----><!---->
+                    <div _ngcontent-sc208="" class="d-lg-none ml-3"><app-internationalization-header _ngcontent-sc208=""
+                            _nghost-sc190="">
+                            <div _ngcontent-sc190="" ngbdropdown="" class="dropdown"><button _ngcontent-sc190=""
+                                    ngbdropdowntoggle="" class="dropdown-toggle btn btn-link btn-language p-0"
+                                    aria-expanded="false"><img _ngcontent-sc190="" src="assets/lang_icon.svg"
+                                        alt="select_lang_icon" class="cursor-pointer"
+                                        style="margin-top: -5px;"></button>
+                                <div _ngcontent-sc190="" ngbdropdownmenu=""
+                                    class="lang-dropdown-menu mt-2 dropdown-menu" data-bs-popper="static">
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                English (English) </span></button></div>
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                French (Français) </span></button></div>
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                German (Deutsch) </span></button></div>
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                Japanese (日本語) </span></button></div>
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                Portugese (Português) </span></button></div>
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                Spanish (Español) </span></button></div>
+                                    <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                            class="dropdown-item py-2"><span _ngcontent-sc190="" class="text-blue-800">
+                                                Mandarin (Chinese) </span></button></div><!---->
+                                </div>
+                            </div>
+                        </app-internationalization-header></div>
+                    <div _ngcontent-sc208="" class="d-lg-none ml-3"><i _ngcontent-sc208=""
+                            class="far fa-right-to-bracket cursor-pointer ft-16 text-white"></i></div>
+                    <!----><!----><!---->
+                    <div _ngcontent-sc208="" id="navbarContent"
+                        class="navbar-collapse text-right d-none d-lg-block nav-height-64 collapse">
+                        <div _ngcontent-sc208="" class="ml-auto d-flex">
+                            <div _ngcontent-sc208=""
+                                class="d-none d-lg-flex px-4 align-items-left mmc-header-mat-tab-group mat-tab-pre-login">
+                                <button _ngcontent-sc208="" class="btn header-btn"> Hackathons </button><button
+                                    _ngcontent-sc208="" class="btn header-btn"> Blogs </button></div><!---->
+                        </div>
+                        <ul _ngcontent-sc208="" class="navbar-nav align-items-center">
+                            <li _ngcontent-sc208="" class="nav-item mr-4"><button _ngcontent-sc208=""
+                                    class="btn btn-primary"> Login </button></li>
+                            <li _ngcontent-sc208="" class="nav-item ml-1"><button _ngcontent-sc208=""
+                                    class="btn btn-outline-primary"> Sign Up</button></li><!----><!---->
+                            <li _ngcontent-sc208="" class="nav-item ml-4"><app-internationalization-header
+                                    _ngcontent-sc208="" _nghost-sc190="">
+                                    <div _ngcontent-sc190="" ngbdropdown="" class="dropdown"><button _ngcontent-sc190=""
+                                            ngbdropdowntoggle="" class="dropdown-toggle btn btn-link btn-language p-0"
+                                            aria-expanded="false"><img _ngcontent-sc190="" src="assets/lang_icon.svg"
+                                                alt="select_lang_icon" class="cursor-pointer"
+                                                style="margin-top: -5px;"></button>
+                                        <div _ngcontent-sc190="" ngbdropdownmenu=""
+                                            class="lang-dropdown-menu mt-2 dropdown-menu" data-bs-popper="static">
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> English (English) </span></button></div>
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> French (Français) </span></button></div>
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> German (Deutsch) </span></button></div>
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> Japanese (日本語) </span></button></div>
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> Portugese (Português) </span></button>
+                                            </div>
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> Spanish (Español) </span></button></div>
+                                            <div _ngcontent-sc190=""><button _ngcontent-sc190="" type="button"
+                                                    class="dropdown-item py-2"><span _ngcontent-sc190=""
+                                                        class="text-blue-800"> Mandarin (Chinese) </span></button></div>
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </app-internationalization-header></li><!---->
+                            <li _ngcontent-sc208="" class="nav-item ml-3"><a _ngcontent-sc208="" target="_blank"
+                                    href="https://support.mettl.com/portal/en/home"><i _ngcontent-sc208=""
+                                        class="far fa-question-circle cursor-pointer ft-16 text-white"></i></a></li>
+                            <!----><!----><!----><!----><!---->
+                        </ul>
+                    </div><!----><!---->
+                    <div _ngcontent-sc208="" class="px-0 ideaCardView"><app-idea-card _ngcontent-sc208=""
+                            _nghost-sc191=""><!----></app-idea-card></div>
+                    <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                </header><!----><!---->
+            </app-header><router-outlet></router-outlet><app-hack-event><!----><app-loading-message>
+                    <div class="container-fluid">
+                        <div class="page-loader"><span></span></div>
+                    </div>
+                </app-loading-message><!----><!----><!----><!----></app-hack-event><!----></div>
+        <!----><app-loading-message>
+            <div class="container-fluid">
+                <div class="page-loader"><span></span></div>
+            </div>
+        </app-loading-message><!----><!---->
+    </app-root>
+    < <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>Designed by Zubaida Sehnaz</p>
+                <p>Phone Number - +919234567891</p>
+                <p>Email - zubaidasehnaz@gmail.com</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/Zubaida0113/Event-Management-System" target="_blank" class="footer-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/your-handle" target="_blank" class="footer-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://discord.com/your-page" target="_blank" class="footer-link">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://instagram.com/your-handle" target="_blank" class="footer-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 EventORBIS.com. All rights reserved.</p>
+        </div>
+        </footer>
+        <button id="scrollToTopBtn" class="scroll-to-top">
+            &#8679; <!-- Unicode for upward arrow -->
+        </button>
+</body>
+
+</html>
