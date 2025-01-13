@@ -169,17 +169,16 @@
                    
                     <div class="col-content">
                         
-                        <form action="" class="contact-form">
+                        <form action="" class="contact-form" id="contact-form">
                                 <label for="username">Name  </label>
-                                <input type="text" name="username" id="username" required title="Enter your name"><br>
-                                <!-- <div class="cfin">
-                                    <input type="text" name="username" id="username" required title="Enter your name"><br>
-                                    <div class="validation-message" id="cname-validation"></div>
-                                </div> -->
+                                <input type="text" name="username" id="name1" required title="Enter your name"><br>
+                                <div id="vm1" style=" color: rgb(250, 8, 8);"></div>
                                 <label for="email1">Email  </label>
                                 <input type="email" name="email1" id="email1" required title="Enter your email"><br>
+                                <div id="vm2" style=" color: rgb(250, 8, 8);"></div>
                                 <label for="city">Phone Number  </label>
-                                <input type="text" name="city" id="city" required title="Enter your phone number"><br>
+                                <input type="text" name="city" id="phone" required title="Enter your phone number"><br>
+                                <div id="vm3" style=" color: rgb(250, 8, 8);"></div>
                                 <!-- <label for="message">Message  </label> -->
                                 <!-- <textarea name="message" id="message" rows="4"></textarea> -->
                                 <button type="submit" onclick="contact()">Contact Us</button>

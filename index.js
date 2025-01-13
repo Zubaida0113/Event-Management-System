@@ -87,7 +87,35 @@ function closePopup(){
   overlay.style.display = 'none';
   document.body.classList.remove('blur');
 }
+function contact(){
+  const NM = document.getElementById('name1');
+  const EM = document.getElementById('email1');
+  const PH = document.getElementById('phone');
+  const validation1 = document.getElementById('vm1');
+  const validation2 = document.getElementById('vm2');
+  const validation3 = document.getElementById('vm3');
+validation1.innerHTML = '';
+validation2.innerHTML = '';
+validation3.innerHTML = '';
 
+if (!NM.checkValidity()) {
+  validation1.innerHTML = '*Please enter a valid name.';
+  return false;
+}
+if (!EM.checkValidity()) {
+  validation2.innerHTML = '*Please enter a valid email.';
+  return false;
+}
+if (!PH.checkValidity()) {
+  validation3.innerHTML = '*Please enter a valid phone number.';
+  return false;
+}
+name1.value = '';
+email1.value = '';
+phone.value = '';
+return true;
+
+}
 function addEvent() {
   // Get form elements
   const eventName = document.getElementById('event-name');
@@ -190,3 +218,4 @@ function contact(){
 name.value = '';
   return true;
 }
+

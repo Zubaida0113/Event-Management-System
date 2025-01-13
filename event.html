@@ -130,7 +130,6 @@
         </div>
         
         <form class="form-add-event" id="eventForm" action="">
-            <div id="validation-messages" style=" color: rgb(196, 31, 31);"></div>
             <label for="event-name">Event Name</label>
             <input type="text" id="event-name" required minlength="3" maxlength="50">
             <label for="event-date">Event Date</label>
@@ -141,6 +140,7 @@
             <textarea id="event-description" required minlength="10" maxlength="500"></textarea>
             
             <button  type="button" class="create-event" onclick="addEvent()">Add Event</button>
+            <div id="validation-messages" style=" color: rgb(250, 8, 8);"></div>
         </form>
     </div>
     
