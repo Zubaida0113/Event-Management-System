@@ -155,7 +155,7 @@ function addEvent() {
   const newEventCard = document.createElement('div');
   newEventCard.classList.add('event-card');
   newEventCard.innerHTML = `
-    <img src="/img/1.png" alt="${eventName.value}">
+    <img src="img/1.png" alt="${eventName.value}">
     <div class="event-info">
       <h3>${eventName.value}</h3>
       <p>${eventDescription.value}</p>
