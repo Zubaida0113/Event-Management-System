@@ -150,20 +150,21 @@ nav ul li a:hover {
 }
 .sidebar li a{
     text-decoration: none; /* Remove text decoration from links */
-    color: black; /* Set the initial color for links and SVGs */
+    color: rgb(83, 215, 248); /* Set the initial color for links and SVGs */
     font-size: 20px;
     font-weight: bold;
     font-family: Poppins;
 }
 
 .sidebar li a:hover, .sidebar li svg:hover {
-    color: rgb(83, 215, 248); /* Change color on hover */
+    color: rgb(70, 152, 228); /* Change color on hover */
+    font-size: 21px;
 }
 .cross-icon{
     display: none;  
 }
 .menu-icon{
-   fill: black;
+   fill: rgb(243, 240, 240);
 }
 .toggle{
     /* z-index: 990; */
