@@ -164,7 +164,7 @@ nav ul li a:hover {
     display: none;  
 }
 .menu-icon{
-   fill: rgb(243, 240, 240);
+   fill: black;
 }
 .toggle{
     /* z-index: 990; */
