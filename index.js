@@ -215,7 +215,5 @@ function contact(){
     emailValidation.innerHTML = '*Please enter a valid name.';
     return false;
 }
-name.value = '';
-  return true;
 }
 
