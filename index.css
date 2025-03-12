@@ -157,14 +157,14 @@ nav ul li a:hover {
 }
 
 .sidebar li a:hover, .sidebar li svg:hover {
-    color: rgb(70, 152, 228); /* Change color on hover */
+    color: rgb(12, 166, 227); /* Change color on hover */
     font-size: 21px;
 }
 .cross-icon{
     display: none;  
 }
 .menu-icon{
-   fill: black;
+   fill: rgb(240, 234, 234);
 }
 .toggle{
     /* z-index: 990; */
